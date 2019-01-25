@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b4651da-094f-4022-966b-fa1bce95bdf2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/check_ssl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/check_ssl.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/check_https/check_https.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/check_https/check_ssl_expiration.py" beforeDir="false" afterPath="$PROJECT_DIR$/check_https/check_ssl_expiration.py" afterDir="false" />
-    </list>
+    <list default="true" id="4b4651da-094f-4022-966b-fa1bce95bdf2" name="Default Changelist" comment="基本功能已经完成，还差celery设置" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,14 +57,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Django Console" value="1426" />
-          <entry key="py" value="1845" />
-          <entry key="txt" value="41" />
+          <entry key="py" value="1860" />
+          <entry key="txt" value="67" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="41" />
-          <entry key="Python" value="3271" />
+          <entry key="PLAIN_TEXT" value="67" />
+          <entry key="Python" value="3286" />
         </counts>
       </usages-collector>
     </session>
@@ -102,11 +96,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/check_https/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+            <state relative-caret-position="494">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
-                <marker date="1548412674164" expanded="true" signature="667:672" ph="..." />
+                <marker date="1548412793596" expanded="true" signature="697:702" ph="..." />
               </folding>
             </state>
           </provider>
@@ -132,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../WorkList/job/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="31" column="43" lean-forward="true" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+            <state relative-caret-position="229">
+              <caret line="26" column="23" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="23" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -288,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1548406417498</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="基本功能已经完成，还差celery设置">
+      <created>1548412898645</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1548412898645</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -307,8 +308,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3290735" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50027764" side_tool="true" weight="0.62406814" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49972236" visible="true" weight="0.46112886" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.50027764" side_tool="true" visible="true" weight="0.35569754" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49972236" visible="true" weight="0.35569754" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.2768903" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -325,7 +326,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加模型" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加模型" />
+    <MESSAGE value="基本功能已经完成，还差celery设置" />
+    <option name="LAST_COMMIT_MESSAGE" value="基本功能已经完成，还差celery设置" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../WorkList/requirements.txt">
@@ -487,8 +489,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../WorkList/job/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="31" column="43" lean-forward="true" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+        <state relative-caret-position="229">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="23" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
@@ -497,11 +499,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/check_https/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+        <state relative-caret-position="494">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
-            <marker date="1548412674164" expanded="true" signature="667:672" ph="..." />
+            <marker date="1548412793596" expanded="true" signature="697:702" ph="..." />
           </folding>
         </state>
       </provider>
