@@ -20,6 +20,7 @@ def alert(message):
     print(message)
     requests.post("http://msg.ops.dragonest.com/notify/%s/send/" % os.getenv('MSG_NOTIFY_ID',"19"), data={"content": message}, headers={"Authorization": "Token %s" % os.getenv('MSG_TOKEN', "c25fa3f66b02c8b83cff9090125df91db288cecb") })
 
+# 更新所有域名信息到https列表
 def update_https_info():
     ssl_date_fmt = r'%b %d %H:%M:%S %Y %Z'
 
@@ -37,20 +38,22 @@ def update_https_info():
         ssl_info = conn.getpeercert()
 
         domain_name = hostname
-        ca = ssl_info['issuer'][3][0][1]
+        ca = ssl_info['issuer'][1][0][1]
         starttime = datetime.datetime.strptime(ssl_info['notBefore'], ssl_date_fmt)
         endtime = datetime.datetime.strptime(ssl_info['notAfter'], ssl_date_fmt)
 
         domain_https.objects.get_or_create(domain_https_name = domain_name, domain_https_ca = ca, domain_https_starttime = starttime, domain_https_endtime = endtime)
 
-
+# 查看https列表中的信息
 def check_https_info(hostname):
+    ssl_date_fmt = r'%Y-%m-%d %H:%M:%S'
     if domain.objects.filter(domain_name = hostname)[0].domain_overseas:
         https_msg = "在海外有做智能DNS解析，请务必同时更新海外加速点slb的证书"
     else:
         https_msg = ""
 
-    domain_https_endtime = domain_https.objects.filter(domain_https_name = hostname)[0].domain_https_endtime
+    domain_https_endtime = datetime.datetime.strptime(domain_https.objects.filter(domain_https_name = hostname)[0].domain_https_endtime, ssl_date_fmt)
+    print(domain_https_endtime)
 
     try:
         remaining = domain_https_endtime - datetime.datetime.utcnow()
