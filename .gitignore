@@ -3,3 +3,4 @@ ssl_check.log
 check_https/migrations/*
 hostname_list.txt
 .idea/*
+celerybeat*

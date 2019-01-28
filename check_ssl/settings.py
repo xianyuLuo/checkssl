@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jet',
+    'jet.dashboard',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -78,13 +80,23 @@ WSGI_APPLICATION = 'check_ssl.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+DATABASE_FILE = os.getenv("DATABASE_FILE", os.path.join(BASE_DIR, 'db.sqlite3'))
+DATABASE_NAME = os.environ.get("DATABASE_NAME", "check_ssl")
+DATABASE_USER = os.environ.get("DATABASE_USER", "check_ssl")
+DATABASE_HOST = os.environ.get("DATABASE_HOST", "")
+DATABASE_PORT = os.environ.get("DATABASE_PORT", 3306)
+DATABASE_PASSWORD = os.environ.get("DATABASE_PASSWORD", "9Jckimq5Bf")
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': DATABASE_NAME,
+        'USER': DATABASE_USER,
+        'PASSWORD': DATABASE_PASSWORD,
+        'HOST': DATABASE_HOST,
+        'PORT': DATABASE_PORT,
+    },
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -123,9 +135,87 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-CELERY_BROKER_URL = 'redis://172.16.52.142:6379/0'
+
+#################
+# Celery相关设置
+#################
+
+CELERY_BROKER_URL = os.environ.get("CELERY_BROKER_URL", "redis://172.16.52.142:6379/0")
 CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 CELERY_TIMEZONE = 'Asia/Shanghai'
 CELERY_RESULT_BACKEND = 'django-db'
 CELERY_TASK_RESULT_EXPIRES = 600
 #CELERYD_CONCURRENCY = 5
+
+
+###################
+# Jet主题相关设置 #
+###################
+
+#主题颜色
+JET_THEMES = [
+    {
+        'theme': 'default', # theme folder name
+        'color': '#47bac1', # color of the theme's button in user menu
+        'title': 'Default' # theme title
+    },
+    {
+        'theme': 'green',
+        'color': '#44b78b',
+        'title': 'Green'
+    },
+    {
+        'theme': 'light-green',
+        'color': '#2faa60',
+        'title': 'Light Green'
+    },
+    {
+        'theme': 'light-violet',
+        'color': '#a464c4',
+        'title': 'Light Violet'
+    },
+    {
+        'theme': 'light-blue',
+        'color': '#5EADDE',
+        'title': 'Light Blue'
+    },
+    {
+        'theme': 'light-gray',
+        'color': '#222',
+        'title': 'Light Gray'
+    }
+]
+
+#左边菜单使用紧凑模式
+JET_SIDE_MENU_COMPACT = False
+
+# 左边显示菜单
+JET_SIDE_MENU_ITEMS = [
+    {
+        'label': '认证和授权',
+        'app_label': 'auth',
+        'items': [
+            {'name': 'group'},
+            {'name': 'user'},
+        ]},
+    {
+        'label': '域名信息',
+        'app_label': 'check_https',
+        'items': [
+            {'name': 'domain'},
+        ]},
+    {
+        'label': '定时任务配置',
+        'app_label': 'django_celery_beat',
+        'items': [
+            {'name': 'periodictask', 'label': '定时任务'},
+            {'name': 'crontableschedule', 'label': 'crontab调度'},
+            {'name': 'intervalschedule', 'label': 'interval调度'}
+        ]},
+    {
+        'label': '定时任务结果',
+        'app_label': 'django_celery_results',
+        'items': [
+            {'name': 'taskresult', 'label': '执行结果'},
+        ]},
+]

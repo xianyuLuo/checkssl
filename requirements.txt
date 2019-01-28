@@ -6,3 +6,6 @@ requests
 ssl
 redis
 django-celery-beat
+django-jet
+google-api-python-client
+mysqlclient

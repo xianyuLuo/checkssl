@@ -48,7 +48,7 @@ def update_https_info():
 def check_https_info(hostname):
     ssl_date_fmt = r'%Y-%m-%d %H:%M:%S'
     if domain.objects.filter(domain_name = hostname)[0].domain_overseas:
-        https_msg = "在海外有做智能DNS解析，请务必同时更新海外加速点slb的证书"
+        https_msg = "在海外有做智能DNS解析，请务必同时更新海外证书!!!"
     else:
         https_msg = ""
 
@@ -101,5 +101,6 @@ def check():
     if do_alert:
         alert(alert_msg)
 
-update_https_info()
-check()
+if __name__ == "__main__":
+    update_https_info()
+    check()
