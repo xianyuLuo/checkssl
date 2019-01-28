@@ -3,7 +3,7 @@ celery
 django-celery
 django-celery-results
 requests
-ssl
+anyjson
 redis
 django-celery-beat
 django-jet

@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'check_ssl.wsgi.application'
 DATABASE_FILE = os.getenv("DATABASE_FILE", os.path.join(BASE_DIR, 'db.sqlite3'))
 DATABASE_NAME = os.environ.get("DATABASE_NAME", "check_ssl")
 DATABASE_USER = os.environ.get("DATABASE_USER", "check_ssl")
-DATABASE_HOST = os.environ.get("DATABASE_HOST", "")
+DATABASE_HOST = os.environ.get("DATABASE_HOST", "rm-uf6n05p6m8rf2nq7llo.mysql.rds.aliyuncs.com")
 DATABASE_PORT = os.environ.get("DATABASE_PORT", 3306)
 DATABASE_PASSWORD = os.environ.get("DATABASE_PASSWORD", "9Jckimq5Bf")
 
