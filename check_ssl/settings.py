@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'check_https',
     'djcelery',
     'django_celery_results',
+    'django_celery_beat',
 ]
 
 MIDDLEWARE = [
@@ -107,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
 TIME_ZONE = 'Asia/Shanghai'
 
@@ -122,7 +123,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-BROKER_URL = 'django://localhost:8000//'
+CELERY_BROKER_URL = 'redis://172.16.52.142:6379/0'
 CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 CELERY_TIMEZONE = 'Asia/Shanghai'
-CELERY_RESULT_BACKEND = 'django-cache'
+CELERY_RESULT_BACKEND = 'django-db'
+CELERY_TASK_RESULT_EXPIRES = 600
+#CELERYD_CONCURRENCY = 5

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../WorkList/.idea/WorkList.iml" filepath="$PROJECT_DIR$/../WorkList/.idea/WorkList.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/check_ssl.iml" filepath="$PROJECT_DIR$/.idea/check_ssl.iml" />
     </modules>
   </component>

@@ -1,0 +1,5 @@
+db.sqlite3
+ssl_check.log
+migrations/*
+hostname_list.txt
+.idea/*
