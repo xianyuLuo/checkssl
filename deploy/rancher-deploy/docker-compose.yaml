@@ -1,17 +1,17 @@
 version: '2'
 services:
   celery-worker:
-    image: registry.cn-shanghai.aliyuncs.com/ly_ops/check_ssl:0.0.2
+    image: registry.cn-shanghai.aliyuncs.com/ly_ops/check_ssl:${VERSION}
     environment:
       CELERY_BROKER_URL: redis://redis:6379/0
       DATABASE_HOST: rm-uf6n05p6m8rf2nq7l.mysql.rds.aliyuncs.com
       DATABASE_NAME: check_ssl
-      DATABASE_PASSWORD: 9Jckimq5Bf
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       DATABASE_PORT: '3306'
       DATABASE_USER: check_ssl
-      LOG_PATH: '/dev/stdout'
+      LOG_PATH: '/dev/null'
       MSG_NOTIFY_ID: '19'
-      MSG_TOKEN: 'c25fa3f66b02c8b83cff9090125df91db288cecb'
+      MSG_TOKEN: ${MSG_TOKEN}
     stdin_open: true
     tty: true
     links:
@@ -26,17 +26,17 @@ services:
     labels:
       io.rancher.container.pull_image: always
   checkssl-backend:
-    image: registry.cn-shanghai.aliyuncs.com/ly_ops/check_ssl:0.0.2
+    image: registry.cn-shanghai.aliyuncs.com/ly_ops/check_ssl:${VERSION}
     environment:
       CELERY_BROKER_URL: redis://redis:6379/0
       DATABASE_HOST: rm-uf6n05p6m8rf2nq7l.mysql.rds.aliyuncs.com
       DATABASE_NAME: check_ssl
-      DATABASE_PASSWORD: 9Jckimq5Bf
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       DATABASE_PORT: '3306'
       DATABASE_USER: check_ssl
-      LOG_PATH: '/dev/stdout'
+      #LOG_PATH: '/dev/stdout'
       MSG_NOTIFY_ID: '19'
-      MSG_TOKEN: 'c25fa3f66b02c8b83cff9090125df91db288cecb'
+      MSG_TOKEN: ${MSG_TOKEN}
     stdin_open: true
     entrypoint:
     - python
@@ -46,22 +46,20 @@ services:
     tty: true
     links:
     - redis:redis
-    ports:
-    - 8000:8000/tcp
     labels:
       io.rancher.container.pull_image: always
   celery-beat:
-    image: registry.cn-shanghai.aliyuncs.com/ly_ops/check_ssl:0.0.2
+    image: registry.cn-shanghai.aliyuncs.com/ly_ops/check_ssl:${VERSION}
     environment:
       CELERY_BROKER_URL: redis://redis:6379/0
       DATABASE_HOST: rm-uf6n05p6m8rf2nq7l.mysql.rds.aliyuncs.com
       DATABASE_NAME: check_ssl
-      DATABASE_PASSWORD: 9Jckimq5Bf
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       DATABASE_PORT: '3306'
       DATABASE_USER: check_ssl
-      LOG_PATH: '/dev/stdout'
+      LOG_PATH: '/dev/null'
       MSG_NOTIFY_ID: '19'
-      MSG_TOKEN: 'c25fa3f66b02c8b83cff9090125df91db288cecb'
+      MSG_TOKEN: ${MSG_TOKEN}
     stdin_open: true
     tty: true
     links:
@@ -70,7 +68,7 @@ services:
     - celery
     - beat
     - -A
-    - config
+    - check_ssl
     - -l
     - info
     - --scheduler

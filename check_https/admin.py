@@ -1,6 +1,5 @@
 from django.contrib import admin, messages
 from .models import domain, domain_https
-from .check_ssl_expiration import check, update_https_info
 from .tasks import CheckHttpsInfo, UpdateHttpsInfo
 
 class DomainAdmin(admin.ModelAdmin):

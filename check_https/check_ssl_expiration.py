@@ -18,7 +18,7 @@ buffer_days = 140
 
 def alert(message):
     print(message)
-    requests.post("http://msg.ops.dragonest.com/notify/%s/send/" % os.getenv('MSG_NOTIFY_ID',"19"), data={"content": message}, headers={"Authorization": "Token %s" % os.getenv('MSG_TOKEN', "c25fa3f66b02c8b83cff9090125df91db288cecb") })
+    requests.post("http://msg.ops.dragonest.com/notify/%s/send/" % os.getenv('MSG_NOTIFY_ID',"19"), data={"content": message}, headers={"Authorization": "Token %s" % os.getenv('MSG_TOKEN', "xxxx") })
 
 # 更新所有域名信息到https列表
 def update_https_info():
@@ -87,7 +87,10 @@ def check():
     for hostname in hostname_list:
         print ('check %s https info' % hostname)
         if hostname:
-            result, message = check_https_info(hostname[0])
+            try:
+                result, message = check_https_info(hostname[0])
+            except Exception as e:
+                print(e)
             if result in ["warning", "error", "fatal" ]:
                 alert_data[result].append(message)
 

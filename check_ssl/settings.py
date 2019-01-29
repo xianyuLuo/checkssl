@@ -25,7 +25,7 @@ SECRET_KEY = '&93x1fj4rexif-%_4h^&-insb+c(y&i#m%*9^utboa0qt##$_a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'check_ssl.wsgi.application'
 DATABASE_FILE = os.getenv("DATABASE_FILE", os.path.join(BASE_DIR, 'db.sqlite3'))
 DATABASE_NAME = os.environ.get("DATABASE_NAME", "check_ssl")
 DATABASE_USER = os.environ.get("DATABASE_USER", "check_ssl")
-DATABASE_HOST = os.environ.get("DATABASE_HOST", "rm-uf6n05p6m8rf2nq7llo.mysql.rds.aliyuncs.com")
+DATABASE_HOST = os.environ.get("DATABASE_HOST", "172.16.52.142")
 DATABASE_PORT = os.environ.get("DATABASE_PORT", 3306)
 DATABASE_PASSWORD = os.environ.get("DATABASE_PASSWORD", "9Jckimq5Bf")
 
