@@ -2,7 +2,6 @@ from django.contrib import admin, messages
 from .models import domain, domain_https
 from .check_ssl_expiration import check, update_https_info
 from .tasks import CheckHttpsInfo, UpdateHttpsInfo
-# Register your models here.
 
 class DomainAdmin(admin.ModelAdmin):
     list_display = ['domain_name', 'domain_port', 'domain_comment']
@@ -12,11 +11,11 @@ class DomainAdmin(admin.ModelAdmin):
     actions = ["update"]
 
     def update(self, request, queryset):
-        # queryset.update(domain_port = 443)
-        # msg = "更新已完成"
-        # self.message_user(request, msg, messages.SUCCESS)
-        UpdateHttpsInfo
-        CheckHttpsInfo
+        # 异步执行任务
+        handle_result = CheckHttpsInfo.delay()
+        if handle_result:
+            msg = "已下发到异步任务队列，请在日志中查看执行情况!!"
+            self.message_user(request, msg, messages.SUCCESS)
 
     update.short_description = "https证书检查"
 

@@ -1,0 +1,452 @@
+Mon, 28 Jan 2019 16:33:08 log.py WARNING Not Found: /
+Mon, 28 Jan 2019 16:43:00 log.py WARNING Not Found: /
+Mon, 28 Jan 2019 17:09:37 log.py WARNING Not Found: /favicon.ico
+Mon, 28 Jan 2019 17:14:21 log.py WARNING Not Found: /favicon.ico
+Mon, 28 Jan 2019 17:34:58 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:34:59 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:36:29 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:36:29 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:39:52 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:39:53 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:39:54 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:39:54 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:39:54 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:39:54 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:39:55 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:39:55 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:39:55 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:39:55 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:41:10 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:41:11 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:44:01 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:44:02 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:44:13 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:44:13 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:45:49 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:45:50 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:51:48 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:51:48 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:52:11 log.py ERROR Internal Server Error: /check_https/domain/
+Traceback (most recent call last):
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\contrib\admin\options.py", line 604, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\contrib\admin\sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\contrib\admin\options.py", line 1701, in changelist_view
+    response = self.response_action(request, queryset=cl.get_queryset(request))
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\contrib\admin\options.py", line 1400, in response_action
+    response = func(self, request, queryset)
+  File "H:\projects\check_ssl\check_https\admin.py", line 17, in update
+    update_https_info()
+  File "H:\projects\check_ssl\check_https\check_ssl_expiration.py", line 37, in update_https_info
+    conn.connect((hostname, port))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\ssl.py", line 1109, in connect
+    self._real_connect(addr, False)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\ssl.py", line 1096, in _real_connect
+    socket.connect(self, addr)
+socket.gaierror: [Errno 11004] getaddrinfo failed
+Mon, 28 Jan 2019 17:52:25 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:52:26 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:53:01 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:53:01 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:53:16 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:53:16 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:54:21 log.py WARNING Not Found: /favicon.ico
+Mon, 28 Jan 2019 17:54:44 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:54:45 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:55:01 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:55:02 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:55:03 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:55:03 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:55:03 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:55:03 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:55:04 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:55:04 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:55:04 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:55:04 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:57:58 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:57:59 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:58:06 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:58:06 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:58:08 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:58:08 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:58:18 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:58:19 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:58:21 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:58:21 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:58:21 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:58:21 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:58:21 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:58:21 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:58:22 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:58:22 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:58:22 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:58:23 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 17:59:06 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 17:59:06 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:03:17 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:03:18 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:04:35 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:04:36 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:04:49 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:04:50 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:04:52 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:04:53 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:04:55 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:04:55 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:06:39 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:06:39 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:06:41 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:06:41 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:06:41 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:06:41 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:06:41 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:06:42 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:06:42 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:06:42 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:06:42 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:06:42 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:08:15 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:08:15 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:08:21 log.py ERROR Internal Server Error: /django_celery_results/taskresult/
+Traceback (most recent call last):
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\urls\base.py", line 75, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'jet'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\base.py", line 154, in _get_response
+    response = response.render()
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\urls\base.py", line 86, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'jet' is not a registered namespace
+Mon, 28 Jan 2019 18:08:25 log.py ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\urls\base.py", line 75, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'jet'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\base.py", line 154, in _get_response
+    response = response.render()
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 987, in render
+    output = self.filter_expression.resolve(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\loader_tags.py", line 76, in super
+    return mark_safe(self.render(self.context))
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\urls\base.py", line 86, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'jet' is not a registered namespace
+Mon, 28 Jan 2019 18:08:28 log.py ERROR Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\urls\base.py", line 75, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'jet'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\base.py", line 154, in _get_response
+    response = response.render()
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 987, in render
+    output = self.filter_expression.resolve(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\loader_tags.py", line 76, in super
+    return mark_safe(self.render(self.context))
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\template\defaulttags.py", line 442, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\urls\base.py", line 86, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'jet' is not a registered namespace
+Mon, 28 Jan 2019 18:08:36 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:08:37 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:09:48 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:09:48 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:10:37 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:10:38 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:10:39 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:10:39 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:12:56 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:12:57 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:12:57 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:12:57 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 18:12:59 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 18:13:00 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Mon, 28 Jan 2019 19:05:25 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Mon, 28 Jan 2019 19:05:26 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Tue, 29 Jan 2019 09:58:49 log.py WARNING Not Found: /favicon.ico
+Tue, 29 Jan 2019 10:12:07 log.py ERROR Internal Server Error: /check_https/domain/
+Traceback (most recent call last):
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\contrib\admin\options.py", line 604, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\contrib\admin\sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\contrib\admin\options.py", line 1701, in changelist_view
+    response = self.response_action(request, queryset=cl.get_queryset(request))
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\contrib\admin\options.py", line 1400, in response_action
+    response = func(self, request, queryset)
+  File "H:\projects\check_ssl\check_https\admin.py", line 18, in update
+    update_https_info()
+  File "H:\projects\check_ssl\check_https\check_ssl_expiration.py", line 37, in update_https_info
+    conn.connect((hostname, port))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\ssl.py", line 1109, in connect
+    self._real_connect(addr, False)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\ssl.py", line 1100, in _real_connect
+    self.do_handshake()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\ssl.py", line 1077, in do_handshake
+    self._sslobj.do_handshake()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionAbortedError: [WinError 10053] 您的主机中的软件中止了一个已建立的连接。
+Tue, 29 Jan 2019 10:13:36 log.py ERROR Internal Server Error: /check_https/domain/
+Traceback (most recent call last):
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\contrib\admin\options.py", line 604, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\contrib\admin\sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\contrib\admin\options.py", line 1701, in changelist_view
+    response = self.response_action(request, queryset=cl.get_queryset(request))
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\contrib\admin\options.py", line 1400, in response_action
+    response = func(self, request, queryset)
+  File "H:\projects\check_ssl\check_https\admin.py", line 18, in update
+    update_https_info()
+  File "H:\projects\check_ssl\check_https\check_ssl_expiration.py", line 37, in update_https_info
+    conn.connect((hostname, port))
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\ssl.py", line 1109, in connect
+    self._real_connect(addr, False)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\ssl.py", line 1100, in _real_connect
+    self.do_handshake()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\ssl.py", line 1077, in do_handshake
+    self._sslobj.do_handshake()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python36\lib\ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionAbortedError: [WinError 10053] 您的主机中的软件中止了一个已建立的连接。
+Tue, 29 Jan 2019 10:25:35 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Tue, 29 Jan 2019 10:25:36 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Tue, 29 Jan 2019 11:09:16 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Tue, 29 Jan 2019 11:09:17 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Tue, 29 Jan 2019 11:35:13 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Tue, 29 Jan 2019 11:35:14 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Tue, 29 Jan 2019 11:41:57 connectionpool.py DEBUG Starting new HTTP connection (1): msg.ops.dragonest.com:80
+Tue, 29 Jan 2019 11:41:58 connectionpool.py DEBUG http://msg.ops.dragonest.com:80 "POST /notify/19/send/ HTTP/1.1" 201 None
+Tue, 29 Jan 2019 12:06:29 log.py ERROR Internal Server Error: /check_https/domain/
+Traceback (most recent call last):
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\contrib\admin\options.py", line 604, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\contrib\admin\sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\contrib\admin\options.py", line 1701, in changelist_view
+    response = self.response_action(request, queryset=cl.get_queryset(request))
+  File "H:\projects\pythonenv\check_ssl\lib\site-packages\django\contrib\admin\options.py", line 1400, in response_action
+    response = func(self, request, queryset)
+  File "H:\projects\check_ssl\check_https\admin.py", line 18, in update
+    format(handle_result.id)
+AttributeError: 'function' object has no attribute 'id'
+Tue, 29 Jan 2019 14:01:58 log.py WARNING Not Found: /add
+Tue, 29 Jan 2019 14:02:17 log.py WARNING Not Found: /CheckHttpsInfo

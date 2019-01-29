@@ -1,0 +1,14 @@
+version: '2'
+services:
+  celery-worker:
+    scale: 1
+    start_on_create: true
+  celery-beat:
+    scale: 1
+    start_on_create: true
+  checkssl-backend:
+    scale: 1
+    start_on_create: true
+  redis:
+    scale: 1
+    start_on_create: true

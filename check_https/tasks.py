@@ -20,6 +20,8 @@ def CheckHttpsInfo(self):
     :param self:
     :return:
     """
-    result = check()
-    return_data = '[check_https.tasks.CheckHttpsInfo], return result: {}'.format(result)
-    return return_data
+    return check()
+
+    # result = check()
+    # return_data = '[check_https.tasks.CheckHttpsInfo], return result: {}'.format(result)
+    # return return_data

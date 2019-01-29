@@ -28,14 +28,18 @@ def update_https_info():
         hostname = e.domain_name
         port = e.domain_port
 
+        print('update %s https info' % hostname)
         context = ssl.create_default_context()
         conn = context.wrap_socket(
             socket.socket(socket.AF_INET),
             server_hostname=hostname,
         )
-        conn.settimeout(60.0)
-        conn.connect((hostname, port))
-        ssl_info = conn.getpeercert()
+        try:
+            conn.settimeout(60.0)
+            conn.connect((hostname, port))
+            ssl_info = conn.getpeercert()
+        except Exception as e:
+            print(e)
 
         domain_name = hostname
         ca = ssl_info['issuer'][1][0][1]
@@ -53,7 +57,7 @@ def check_https_info(hostname):
         https_msg = ""
 
     domain_https_endtime = datetime.datetime.strptime(domain_https.objects.filter(domain_https_name = hostname)[0].domain_https_endtime, ssl_date_fmt)
-    print(domain_https_endtime)
+    #print(domain_https_endtime)
 
     try:
         remaining = domain_https_endtime - datetime.datetime.utcnow()
@@ -81,6 +85,7 @@ def check():
 
     hostname_list = list(domain.objects.values_list('domain_name'))
     for hostname in hostname_list:
+        print ('check %s https info' % hostname)
         if hostname:
             result, message = check_https_info(hostname[0])
             if result in ["warning", "error", "fatal" ]:
@@ -100,6 +105,8 @@ def check():
 
     if do_alert:
         alert(alert_msg)
+
+    return True
 
 if __name__ == "__main__":
     update_https_info()
