@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/check_ssl.iml" filepath="$PROJECT_DIR$/.idea/check_ssl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../k8s-compose/.idea/k8s-compose.iml" filepath="$PROJECT_DIR$/../k8s-compose/.idea/k8s-compose.iml" />
     </modules>
   </component>
 </project>
