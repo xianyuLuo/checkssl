@@ -90,6 +90,7 @@ def check():
             try:
                 result, message = check_https_info(hostname[0])
             except Exception as e:
+                result, message = 'error', str(hostname) + " " + str(e)
                 print(e)
             if result in ["warning", "error", "fatal" ]:
                 alert_data[result].append(message)
