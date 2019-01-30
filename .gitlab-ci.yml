@@ -2,7 +2,7 @@
 image: docker:latest
 stages:
   - build
-  - deploy
+  - deploy-qa
 
 services:
   - docker:dind
@@ -34,31 +34,62 @@ build_image:
     - master
     - dev
 
-deploy_staging:
-  image:
-    name: i.harbor.dragonest.net/public/rancher-cli:v0.6.5
-    entrypoint: [""]
-  stage: deploy
-  before_script:
-    - export RANCHER_ACCESS_KEY=${RANCHER_ACCESS_KEY}
-    - export RANCHER_SECRET_KEY="${RANCHER_SECRET_KEY}"
-    - export RANCHER_URL="http://rancher.ops.dragonest.com/v2-beta/schemas"
-    - export RANCHER_ENVIRONMENT="1a24084"
-    - export SSL_VERIFY="false"
-    - export VERSION=${CI_COMMIT_TAG##v}
-    - export MSG_TOKEN=${MSG_TOKEN}
-    - export DATABASE_PASSWORD=${DATABASE_PASSWORD}
-    - /entrypoint.sh
+deploy-qa-checkssl-backend:
+  image: i.harbor.dragonest.net/public/kubectl:v1.11.0.gitlab-cicd
+  stage: deploy-qa
+  variables:
+    K8S_API_SERVER: ${K8S_API_SERVER}
+    TOKEN: ${KUBECTL_TOKEN}
+    NAMESPACE: ops-qa
+    DEPLOYMENT_NAME: checkssl-dep
+    CONTAINER_NAME: checkssl-backend
+    IMAGE: registry.cn-shanghai.aliyuncs.com/ly_ops/check_ssl
+    VERSION: ${CI_COMMIT_TAG}
   script:
-    - cd tools/rancher-deploy && rancher up -s checkssl -u -d -c
+    - /gitlab-cicd.sh
   tags:
     - rancher
     - dev
   only:
     - tags
-    - triggers
-    - schedules
-  except:
-    - master
+  when: manual
+
+deploy-qa-celery-worker:
+  image: i.harbor.dragonest.net/public/kubectl:v1.11.0.gitlab-cicd
+  stage: deploy-qa
+  variables:
+    K8S_API_SERVER: ${K8S_API_SERVER}
+    TOKEN: ${KUBECTL_TOKEN}
+    NAMESPACE: ops-qa
+    DEPLOYMENT_NAME: checkssl-dep
+    CONTAINER_NAME: celery-worker
+    IMAGE: registry.cn-shanghai.aliyuncs.com/ly_ops/check_ssl
+    VERSION: ${CI_COMMIT_TAG}
+  script:
+    - /gitlab-cicd.sh
+  tags:
+    - rancher
     - dev
+  only:
+    - tags
+  when: manual
+
+deploy-qa-celery-beta:
+  image: i.harbor.dragonest.net/public/kubectl:v1.11.0.gitlab-cicd
+  stage: deploy-qa
+  variables:
+    K8S_API_SERVER: ${K8S_API_SERVER}
+    TOKEN: ${KUBECTL_TOKEN}
+    NAMESPACE: ops-qa
+    DEPLOYMENT_NAME: checkssl-dep
+    CONTAINER_NAME: celery-beta
+    IMAGE: registry.cn-shanghai.aliyuncs.com/ly_ops/check_ssl
+    VERSION: ${CI_COMMIT_TAG}
+  script:
+    - /gitlab-cicd.sh
+  tags:
+    - rancher
+    - dev
+  only:
+    - tags
   when: manual
