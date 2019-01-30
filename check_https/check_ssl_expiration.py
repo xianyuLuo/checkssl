@@ -38,15 +38,15 @@ def update_https_info():
             conn.settimeout(60.0)
             conn.connect((hostname, port))
             ssl_info = conn.getpeercert()
+
+            domain_name = hostname
+            ca = ssl_info['issuer'][1][0][1]
+            starttime = datetime.datetime.strptime(ssl_info['notBefore'], ssl_date_fmt)
+            endtime = datetime.datetime.strptime(ssl_info['notAfter'], ssl_date_fmt)
+
+            domain_https.objects.get_or_create(domain_https_name = domain_name, domain_https_ca = ca, domain_https_starttime = starttime, domain_https_endtime = endtime)
         except Exception as e:
             print(e)
-
-        domain_name = hostname
-        ca = ssl_info['issuer'][1][0][1]
-        starttime = datetime.datetime.strptime(ssl_info['notBefore'], ssl_date_fmt)
-        endtime = datetime.datetime.strptime(ssl_info['notAfter'], ssl_date_fmt)
-
-        domain_https.objects.get_or_create(domain_https_name = domain_name, domain_https_ca = ca, domain_https_starttime = starttime, domain_https_endtime = endtime)
 
 # 查看https列表中的信息
 def check_https_info(hostname):
