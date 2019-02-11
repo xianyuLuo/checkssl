@@ -44,7 +44,7 @@ def update_https_info():
             starttime = datetime.datetime.strptime(ssl_info['notBefore'], ssl_date_fmt)
             endtime = datetime.datetime.strptime(ssl_info['notAfter'], ssl_date_fmt)
 
-            domain_https.objects.get_or_create(domain_https_name = domain_name, domain_https_ca = ca, domain_https_starttime = starttime, domain_https_endtime = endtime)
+            domain_https.objects.update_or_create(domain_https_name = domain_name, domain_https_ca = ca, domain_https_starttime = starttime, domain_https_endtime = endtime)
         except Exception as e:
             print(e)
 
