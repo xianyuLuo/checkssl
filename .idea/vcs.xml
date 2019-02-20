@@ -4,5 +4,6 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../check_ssl_expiration" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../k8s-compose" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../rmsBackend" vcs="Git" />
   </component>
 </project>
