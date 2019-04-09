@@ -3,8 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/check_ssl.iml" filepath="$PROJECT_DIR$/.idea/check_ssl.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../k8s-compose/.idea/k8s-compose.iml" filepath="$PROJECT_DIR$/../k8s-compose/.idea/k8s-compose.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../rmsBackend/.idea/rmsBackend.iml" filepath="$PROJECT_DIR$/../rmsBackend/.idea/rmsBackend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../check_ssl_expiration/.idea/check_ssl_expiration.iml" filepath="$PROJECT_DIR$/../check_ssl_expiration/.idea/check_ssl_expiration.iml" />
     </modules>
   </component>
 </project>

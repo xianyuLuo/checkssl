@@ -16,8 +16,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="k8s-compose" />
-    <orderEntry type="module" module-name="rmsBackend" />
+    <orderEntry type="module" module-name="check_ssl_expiration" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
