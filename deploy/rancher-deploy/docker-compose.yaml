@@ -1,10 +1,10 @@
 version: '2'
 services:
   celery-worker:
-    image: registry.cn-shanghai.aliyuncs.com/ly_ops/check_ssl:${VERSION}
+    image: xxxxxxxxxxxxxxxxxxxxx/ly_ops/check_ssl:${VERSION}
     environment:
       CELERY_BROKER_URL: redis://redis:6379/0
-      DATABASE_HOST: rm-uf6n05p6m8rf2nq7l.mysql.rds.aliyuncs.com
+      DATABASE_HOST: xxxxxxxxxxxxxxxxxxxx
       DATABASE_NAME: check_ssl
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       DATABASE_PORT: '3306'
@@ -26,10 +26,10 @@ services:
     labels:
       io.rancher.container.pull_image: always
   checkssl-backend:
-    image: registry.cn-shanghai.aliyuncs.com/ly_ops/check_ssl:${VERSION}
+    image: xxxxxxxxxxxxxx/ly_ops/check_ssl:${VERSION}
     environment:
       CELERY_BROKER_URL: redis://redis:6379/0
-      DATABASE_HOST: rm-uf6n05p6m8rf2nq7l.mysql.rds.aliyuncs.com
+      DATABASE_HOST: xxxxxxxxxxxxxxxxxxxxxxxxxxx
       DATABASE_NAME: check_ssl
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       DATABASE_PORT: '3306'
@@ -49,10 +49,10 @@ services:
     labels:
       io.rancher.container.pull_image: always
   celery-beat:
-    image: registry.cn-shanghai.aliyuncs.com/ly_ops/check_ssl:${VERSION}
+    image: xxxxxxxxxxxxxxxx/ly_ops/check_ssl:${VERSION}
     environment:
       CELERY_BROKER_URL: redis://redis:6379/0
-      DATABASE_HOST: rm-uf6n05p6m8rf2nq7l.mysql.rds.aliyuncs.com
+      DATABASE_HOST: xxxxxxxxxxxx
       DATABASE_NAME: check_ssl
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
       DATABASE_PORT: '3306'
