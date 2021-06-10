@@ -1,4 +1,4 @@
-django==2.1.5
+django==2.2.24
 celery
 django-celery
 django-celery-results
